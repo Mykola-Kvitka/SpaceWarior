@@ -1,0 +1,7 @@
+Pirets attacked ship! Damage 344
+Ship attacked pirates! Damage 344
+Pirets attacked ship! Damage 344
+Ship attacked pirates! Damage 344
+Pirets attacked ship! Damage 344
+Ship was destroied! 
+
