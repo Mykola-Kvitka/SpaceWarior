@@ -1,7 +1,0 @@
-Pirets attacked ship! Damage 486
-Ship attacked pirates! Damage 100
-Pirets attacked ship! Damage 486
-Ship attacked pirates! Damage 100
-Pirets attacked ship! Damage 486
-Ship was destroied! 
-
