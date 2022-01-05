@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Module
+namespace SpaceShip.Modules
 {
-    private double _price;
-    private double _strength;
+    public class Module
+    {
+        private double _price;
+        private double _strength;
     
     
+    }
 }

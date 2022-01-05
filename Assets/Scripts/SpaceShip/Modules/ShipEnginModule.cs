@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ShipEnginModule : Module
+namespace SpaceShip.Modules
 {
+    public class ShipEnginModule : Module
+    {
 
+    }
 }

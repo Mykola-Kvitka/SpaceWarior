@@ -1,55 +1,57 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Configuration;
+using Movement;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace Player
 {
-    [SerializeField]
-    private PlayerResources data;
-
-    private int _squareSide;
-
-    private void Awake()
+    public class Player : MonoBehaviour
     {
-        data.Init();
-    }
+        [SerializeField]
+        private PlayerResources data;
 
-    private void Update()
-    {
-        Movement();
-    }
+        private int _squareSide;
 
-    public void SetSquareSide(int squareSide)
-    {
-        _squareSide = squareSide;
-    }
-
-    private void Movement()
-    {
-        if (Input.GetMouseButtonDown(0))
+        private void Awake()
         {
-            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-            if (hit.collider != null)
-            {
-                var cost = _squareSide *
-                    (Pathfinding.FindPath(this.transform.position, hit.collider.transform.position)) / 10;
+            data.Init();
+        }
 
-                if (true)
+        private void Update()
+        {
+            Movement();
+        }
+
+        public void SetSquareSide(int squareSide)
+        {
+            _squareSide = squareSide;
+        }
+
+        private void Movement()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+                if (hit.collider != null)
                 {
-                    if (data.RemoveEnergy(cost))
+                    var cost = _squareSide *
+                        (Pathfinding.FindPath(this.transform.position, hit.collider.transform.position)) / 10;
+
+                    if (true)
                     {
-                        this.transform.position = hit.collider.transform.position;
+                        if (data.RemoveEnergy(cost))
+                        {
+                            this.transform.position = hit.collider.transform.position;
+                        }
+                        else
+                        {
+                            //event
+                        }
                     }
                     else
                     {
-                        //event
-                    }
-                }
-                else
-                {
                     
+                    }
                 }
             }
         }

@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum TradeName
+namespace Enum
 {
-    Buy,
-    Sell,
-    BuyWithDelivery
+    public enum TradeName
+    {
+        Buy,
+        Sell,
+        BuyWithDelivery
+    }
 }

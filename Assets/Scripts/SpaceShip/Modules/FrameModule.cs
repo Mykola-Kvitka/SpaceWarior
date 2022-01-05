@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class FrameModule : Module
+namespace SpaceShip.Modules
 {
+    public class FrameModule : Module
+    {
     
+    }
 }

@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.Events;
 
-public class AsteroidMiningEvent : UnityEvent<int>
+namespace Events
 {
+    public class AsteroidMiningEvent : UnityEvent<int>
+    {
 
+    }
 }

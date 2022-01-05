@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Events\BattleEvent.cs" />
      <Compile Include="Assets\Scripts\Mining\MiningEventListener.cs" />
+     <Compile Include="Assets\Scripts\Enum\TradeName.cs" />
      <Compile Include="Assets\Scripts\SpaceShip\Modules\Module.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Movement\Pathfinding.cs" />
@@ -63,8 +64,11 @@
      <Compile Include="Assets\Scripts\Configuration\ShipModelConfig\ModuleWithLimit.cs" />
      <Compile Include="Assets\Scripts\Map\Planet.cs" />
      <Compile Include="Assets\Scripts\Configuration\ShipData.cs" />
+     <Compile Include="Assets\Scripts\Trade\SellResources.cs" />
      <Compile Include="Assets\Scripts\SpaceShip\Modules\CollectoreModule.cs" />
      <Compile Include="Assets\Scripts\SpaceShip\Modules\ConverterModule.cs" />
+     <Compile Include="Assets\Scripts\Events\BuyEnergyEvent.cs" />
+     <Compile Include="Assets\Scripts\Trade\BuyEnergy.cs" />
      <Compile Include="Assets\Scripts\Events\IntInvokerEvent.cs" />
      <Compile Include="Assets\Scripts\SpaceShip\Modules\FrameModule.cs" />
      <Compile Include="Assets\Scripts\Events\AsteroidMiningEvent.cs" />
@@ -88,6 +92,7 @@
      <Compile Include="Assets\Scripts\SpaceShip\Modules\CommandModule.cs" />
      <Compile Include="Assets\Scripts\Map\MapGenerator.cs" />
      <Compile Include="Assets\Scripts\Map\Asteroid.cs" />
+     <Compile Include="Assets\Scripts\Events\PlanetMiningEvent.cs" />
      <Compile Include="Assets\Scripts\SpaceShip\Modules\StoregeModule.cs" />
      <Compile Include="Assets\Scripts\SpaceShip\Modules\GeneratorModule.cs" />
      <Compile Include="Assets\Scripts\Events\ZeroInvokerEvent.cs" />
@@ -97,15 +102,7 @@
      <Compile Include="Assets\Scripts\Configuration\HUDConfiguration.cs" />
      <Compile Include="Assets\Scripts\Movement\Grid.cs" />
      <Compile Include="Assets\Scripts\Configuration\ShipModelConfig\EngineModule.cs" />
-     <Compile Include="Assets\Scripts\Events\PlanetMiningEvent.cs" />
-     <Compile Include="Assets\Scripts\Trade\SellResources.cs" />
-     <Compile Include="Assets\Scripts\Trade\BuyEnergy.cs" />
-     <Compile Include="Assets\Scripts\Enum\TradeName.cs" />
-     <Compile Include="Assets\Scripts\Events\BuyEnergyEvent.cs" />
-     <None Include="Assets\Battle(3).txt" />
-     <None Include="Assets\Battle.txt" />
-     <None Include="Assets\Battle(2).txt" />
-     <None Include="Assets\Battle(1).txt" />
+     <Compile Include="Assets\Scripts\Configuration\BattleRewardConfiguration.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Enum;
 using UnityEngine.Events;
 
-public class BuyEnergyEvent : UnityEvent<int, TradeName>
+namespace Events
 {
+    public class BuyEnergyEvent : UnityEvent<int, TradeName>
+    {
+    }
 }

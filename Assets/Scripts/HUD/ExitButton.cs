@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitButton : MonoBehaviour
+namespace HUD
 {
-   public void ExitClick()
+   public class ExitButton : MonoBehaviour
    {
-      Application.Quit();
+      public void ExitClick()
+      {
+         Application.Quit();
+      }
    }
 }

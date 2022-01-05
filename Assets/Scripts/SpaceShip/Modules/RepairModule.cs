@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class RepairModule : Module
+namespace SpaceShip.Modules
 {
+    public class RepairModule : Module
+    {
     
+    }
 }

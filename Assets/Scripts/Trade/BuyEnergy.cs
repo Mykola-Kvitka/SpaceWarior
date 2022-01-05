@@ -1,70 +1,74 @@
-using System.Collections;
-using System.Collections.Generic;
+using Configuration;
+using Enum;
+using Events;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BuyEnergy : MonoBehaviour
+namespace Trade
 {
-    [SerializeField] private PlayerResources _playerResources;
+    public class BuyEnergy : MonoBehaviour
+    {
+        [SerializeField] private PlayerResources _playerResources;
 
-    private BuyEnergyEvent _buyEnergyEvent;
+        private BuyEnergyEvent _buyEnergyEvent;
     
-    private void Start()
-    {
-        EventManager.AddBuyEnergyListener(Buy);
-    }
-
-
-    private void Buy(int energy, TradeName name)
-    {
-        switch (name)
+        private void Start()
         {
-            case TradeName.BuyWithDelivery:
-                if (energy < 1500)
-                {
-                    BuyEnergyNow(energy, 0.4);
-                }
-                else
-                {
-                    BuyEnergyNow(energy, 0.3);
-                }
-
-                break;
-            case TradeName.Buy:
-                if (energy < 100)
-                {
-                    BuyEnergyNow(energy, 0.5);
-                }
-                else if (energy < 500)
-                {
-                    BuyEnergyNow(energy, 0.4);
-                }
-                else if (energy < 1500)
-                {
-                    BuyEnergyNow(energy, 0.3);
-                }
-                else
-                {
-                    BuyEnergyNow(energy, 0.1);
-                }
-
-                break;
+            EventManager.AddBuyEnergyListener(Buy);
         }
-    }
 
-    private void BuyEnergyNow(int energy, double price)
-    {
-        if (_playerResources.RemoveCryptoCurrency(energy * price))
+
+        private void Buy(int energy, TradeName name)
         {
-            _playerResources.AddEnergy(energy);
-        }
-        else
-            Debug.Log("Not enouth money");
-    }
+            switch (name)
+            {
+                case TradeName.BuyWithDelivery:
+                    if (energy < 1500)
+                    {
+                        BuyEnergyNow(energy, 0.4);
+                    }
+                    else
+                    {
+                        BuyEnergyNow(energy, 0.3);
+                    }
 
-    public void AddBuyEnergyEventListener(UnityAction<int, TradeName> buyEnergyEventHandler)
-    {
-        _buyEnergyEvent.AddListener(buyEnergyEventHandler);
+                    break;
+                case TradeName.Buy:
+                    if (energy < 100)
+                    {
+                        BuyEnergyNow(energy, 0.5);
+                    }
+                    else if (energy < 500)
+                    {
+                        BuyEnergyNow(energy, 0.4);
+                    }
+                    else if (energy < 1500)
+                    {
+                        BuyEnergyNow(energy, 0.3);
+                    }
+                    else
+                    {
+                        BuyEnergyNow(energy, 0.1);
+                    }
+
+                    break;
+            }
+        }
+
+        private void BuyEnergyNow(int energy, double price)
+        {
+            if (_playerResources.RemoveCryptoCurrency(energy * price))
+            {
+                _playerResources.AddEnergy(energy);
+            }
+            else
+                Debug.Log("Not enouth money");
+        }
+
+        public void AddBuyEnergyEventListener(UnityAction<int, TradeName> buyEnergyEventHandler)
+        {
+            _buyEnergyEvent.AddListener(buyEnergyEventHandler);
+        }
     }
 }
 
